@@ -8,14 +8,14 @@ on:
 jobs:
   job1:
     name: firstjob
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: This is first job
       run: date
   job2:
     name: secondjob
-    run-on: windows-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
     - name: This is second job
@@ -23,7 +23,7 @@ jobs:
   job3:
     name: thirdjob
     needs: [ "job1", "job2" ]
-    run-on: macos-latest
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: This is third job
